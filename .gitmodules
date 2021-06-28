@@ -1,0 +1,6 @@
+[submodule "myreads-go-backend"]
+	path = myreads-go-backend
+	url = https://github.com/pratikjagrut/myreads-go-backend.git
+[submodule "myreads-web-ui"]
+	path = myreads-web-ui
+	url = https://github.com/pratikjagrut/myreads-web-ui.git
