@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+    server:
+        build: 
+            context: ./myreads-go-backend
+            args: 
+                DB_HOST: ${DB_HOST}  
+                BASIC_AUTH_TOKEN: ${BASIC_AUTH_TOKEN}
+                HDB_ADMIN: ${HDB_ADMIN}
+                PASSWORD: ${PASSWORD}
+                PORT: ${PORT}
+        ports:
+            - "8000:${PORT}"
+        volumes:
+            - images:/server/images
+        command: "false"
+    web-ui:
+        build: 
+            context: ./myreads-web-ui
+            args:
+                API_URL: ${API_URL}
+        ports:
+            - "3000:80"
+volumes: 
+    images:
