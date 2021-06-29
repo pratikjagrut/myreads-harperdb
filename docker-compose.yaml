@@ -13,7 +13,7 @@ services:
             - "8000:${PORT}"
         volumes:
             - images:/server/images
-        command: "false"
+        command: "true"
     web-ui:
         build: 
             context: ./myreads-web-ui
